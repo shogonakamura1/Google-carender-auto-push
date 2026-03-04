@@ -22,7 +22,7 @@ func ParseEvents(apiKey, text string) ([]models.GeminiEvent, error) {
 	}
 	defer client.Close()
 
-	model := client.GenerativeModel("gemini-3.1-flash-lite-preview")
+	model := client.GenerativeModel("gemini-2.5-flash")
 	model.SetTemperature(0)
 
 	prompt := buildPrompt(text, time.Now())

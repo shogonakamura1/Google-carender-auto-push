@@ -29,9 +29,6 @@ func main() {
 
 	geminiAPIKey := os.Getenv("GEMINI_API_KEY")
 	if geminiAPIKey == "" {
-		geminiAPIKey = os.Getenv("GEMINI_API")
-	}
-	if geminiAPIKey == "" {
 		fmt.Fprintln(os.Stderr, "エラー: GEMINI_API_KEY または GEMINI_API 環境変数が設定されていません")
 		fmt.Fprintln(os.Stderr, "  export GEMINI_API_KEY='your-api-key'")
 		os.Exit(1)
